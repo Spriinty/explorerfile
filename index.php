@@ -1,4 +1,20 @@
-<?php require 'header.php'; ?>
+<?php
+
+$ressource = opendir('archive');
+
+while(($entry = readdir($ressource)) !== FALSE){
+    if ($entry != '.' && $entry != '..' && $entry != '-->'){
+    echo $entry."<br/>";
+    }
+}
+?>
+
+
+
+
+
+
+<!-- <?php require 'header.php'; ?>
 
     <div class="container-fluid">
         <div class="container">
@@ -10,4 +26,4 @@
         </div>
     </div>
 
-<?php require 'footer.php'; ?>
+<?php require 'footer.php'; ?> -->
