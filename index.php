@@ -1,10 +1,7 @@
-
-
-
- <?php require 'header.php'; ?>
+<?php require 'header.php'; ?>
 <?php
 
-$ressource = opendir('archive');
+$ressource = opendir('media');
 
 while(($entry = readdir($ressource)) !== FALSE){
     if ($entry != '.' && $entry != '..' && $entry != '-->'){
@@ -13,11 +10,7 @@ while(($entry = readdir($ressource)) !== FALSE){
 }
 ?>
 
-
-
-
-
-   <!-- <div class="container-fluid h-100">
+<div class="container-fluid h-100">
         <div class="container ">
 <body class="bg-leaf">
     <div class="container-fluid d-flex align-items-center">
