@@ -1,12 +1,5 @@
 /*-----BG SECTION----*/
 
-.body-background{
-    background-image: url(../media/background.jpg);
-    height: 100vh;
-    background-position: center;
-    background-size: cover;
-}
-
 .bg-folder{
     background-image:url(../media/data-storage.png);
 }

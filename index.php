@@ -4,13 +4,10 @@
  <?php require 'header.php'; ?>
 <?php
 
-// $ressource = opendir('archive');
+$root = opendir('rootprojet');
 
-// while(($entry = readdir($ressource)) !== FALSE){
-//     if ($entry != '.' && $entry != '..' && $entry != '-->'){
-//     echo $entry."<br/>";
-//     }
-// }
+// echo'
+$ressource = opendir('archive');
 
 $directory = getcwd(); /* FAIRE UN ECHO DE CETTE VARIABLE DANS LA BARRE DE NAVIGATION */
    /* AFFICHE LE CHEMIN DU DOSSIER EN COURS */
@@ -41,14 +38,21 @@ $directory = getcwd(); /* FAIRE UN ECHO DE CETTE VARIABLE DANS LA BARRE DE NAVIG
                 </div>
             </div>
             <div class="row bg-dark pt-5 pl-5 pb-5">
-                <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-folder text-blue h1"></i><br><span class="text-light">CSS</span></a></button>
+                <div class="col-12">
+                    <?php while(($entry = readdir($ressource)) !== FALSE){
+                            if ($entry != '.' && $entry != '..' && $entry != '-->'){
+                            echo $entry.", ";
+                            }
+                        } ?>
+                </div>
+                <!-- <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-folder text-blue h1"></i><br><span class="text-light">CSS</span></a></button>
                 <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-folder text-blue h1"></i><br><span class="text-light">JS</span></a></button>
                 <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-folder text-blue h1"></i><br><span class="text-light">MEDIA</span></a></button>
                 <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-file text-blue h1"></i><br><span class="text-light">contact.php</span></a></button>
                 <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-file text-blue h1"></i><br><span class="text-light">footer.php</span></a></button>
                 <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-file text-blue h1"></i><br><span class="text-light">header.php</span></a></button>
                 <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-file text-blue h1"></i><br><span class="text-light">index.php</span></a></button>
-                <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-file text-blue h1"></i><br><span class="text-light">traitement.php</span></a></button>
+                <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-file text-blue h1"></i><br><span class="text-light">traitement.php</span></a></button> -->
             </div>
         </div>
     </div>-->
