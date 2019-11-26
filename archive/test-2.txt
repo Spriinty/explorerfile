@@ -1,0 +1,20 @@
+Instalation php 7.2
+
+sudo atp install apache2
+sudo apt-get -y install php
+sudo apt-get -y install libapache2-mod-php 
+sudo apt-get -y install php-cli 
+sudo apt-get -y install php-mysql 
+sudo apt-get -y install php-gd 
+sudo apt-get -y install php-imagick 
+sudo apt-get -y install php-recode 
+sudo apt-get -y install php-tidy 
+sudo apt-get -y install php-xmlrpc 
+sudo apt-get -y install php-zip 
+sudo apt-get -y install php-mbstring
+faire un php -v pour vérifier la version php 7.2 est bien installé 
+La version php 7.2 est installer par default lors de l’installation de php
+
+
+
+test 2

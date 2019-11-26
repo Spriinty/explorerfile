@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <p>Afficher dans le paragrahe ayant l'id numberElementhasClicked le nombre case cochée.</p>
+    <div>
+        <form action="">
+
+            <div>
+                <div>
+                    <input type="checkbox" name="liquide[]" id="essence" value="essence"><label for="essence">Essence</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="liquide[]" id="diesel" value="diesel"><label for="diesel">Diesel</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="liquide[]" id="ethanol" value="ethanol"><label for="ethanol">Ethanol</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="liquide[]" id="gaz" value="gaz"><label for="gaz">Gaz</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="liquide[]" id="electrique" value="electrique"><label for="electrique">Electrique</label>
+                </div>
+            </div>
+        </form>
+        <p id="numberElementhasClicked"></p>
+    </div>
+    <script>
+        // Ici on selectionne tous les inputs. Ma variable devient une collection d'élément html
+         inputChecks = document.querySelectorAll('input');
+         console.log(inputChecks);
+
+        //Pour chaque élément html qu'il y a dans la collection 
+        for(item of inputChecks){
+
+            // J'attribut l'évènement click
+            item.addEventListener('click', function(){
+                // Je selectionne les cases a cocher qui sont dans l'état cochées
+                inputHasCheckeds = document.querySelectorAll('input:Checked');
+                console.log(inputHasCheckeds);
+
+                pDisplay = document.querySelector('#numberElementhasClicked');
+                console.log(pDisplay);
+
+                // je vais maintenat afficher la valeur 
+                pDisplay.innerText = inputHasCheckeds.length;
+
+            });
+        }
+        //     //Je sélectionne la valeur du bouton radio coché
+        //     valeur = document.querySelector('input[name=liquide]:checked').value;
+        //     //Je sélectionne le paragraphe ayant l'id numberElementhasClicked
+        //     elementPDisplayNumber = document.querySelector('#numberElementhasClicked');
+        //     //J'affecte au paragraphe comme contenu la valeur stockée dans la variable valeur et je la met en majuscule
+        //     elementPDisplayNumber.innerText = valeur.total();
+        //     })
+            
+    </script>
+    
+</body>
+</html>
