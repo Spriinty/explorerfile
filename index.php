@@ -4,27 +4,34 @@
  <?php require 'header.php'; ?>
 <?php
 
-$ressource = opendir('archive');
+// $ressource = opendir('archive');
 
-while(($entry = readdir($ressource)) !== FALSE){
-    if ($entry != '.' && $entry != '..' && $entry != '-->'){
-    echo $entry."<br/>";
-    }
-}
+// while(($entry = readdir($ressource)) !== FALSE){
+//     if ($entry != '.' && $entry != '..' && $entry != '-->'){
+//     echo $entry."<br/>";
+//     }
+// }
+
+$directory = getcwd(); /* FAIRE UN ECHO DE CETTE VARIABLE DANS LA BARRE DE NAVIGATION */
+   /* AFFICHE LE CHEMIN DU DOSSIER EN COURS */
+
 ?>
 
 
 
 
-
-   <!-- <div class="container-fluid h-100">
-        <div class="container ">
 <body class="bg-leaf">
+<div class="container-fluid h-100">
+        <div class="container ">
+
     <div class="container-fluid d-flex align-items-center">
         <div class="container bg-light">
             <div class="row">
-                <div class="col-10 float-left">
+                <div class="col-2 float-left">
                     <button type="button" class="btn btn-light"><a href="#"><i class="fas fa-home text-dark"></i></a></button>
+                </div>
+                <div class="col-8">
+                    <p><?php echo $directory ?></p>
                 </div>
                 <div class="col-1 float-right">
                     <button type="button" class="btn btn-light"><a href="#"><i class="fas fa-arrow-alt-circle-left text-dark"></i></a></button>
@@ -44,6 +51,6 @@ while(($entry = readdir($ressource)) !== FALSE){
                 <button type="button" class="btn btn-dark"><a href="#" class="text-decoration-none"><i class="fas fa-file text-blue h1"></i><br><span class="text-light">traitement.php</span></a></button>
             </div>
         </div>
-    </div>
+    </div>-->
     
 <?php require 'footer.php'; ?>
