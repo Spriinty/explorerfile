@@ -1,29 +1,10 @@
 <?php
-/* 
-Free PHP File Directory Listing Script - Version 1.10
-The MIT License (MIT)
-Copyright (c) 2015 Hal Gatewood
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-*** OPTIONS ***/
+
 	// TITLE OF PAGE
 	$title = "List of Files";
 	
 	// STYLING (light or dark)
-	$color	= "light";
+	$color	= "dark";
 	
 	// ADD SPECIFIC FILES YOU WANT TO IGNORE HERE
 	$ignore_file_list = array( ".htaccess", "Thumbs.db", ".DS_Store", "index.php" );
@@ -43,6 +24,8 @@ SOFTWARE.
 	
 	// IGNORE EMPTY FOLDERS
 	$ignore_empty_folders = true;
+
+		$icon_url = "https://www.dropbox.com/s/jt4kpbg99s8f3ic/js.png?dl=0";
 	
 // SET TITLE BASED ON FOLDER NAME, IF NOT SET ABOVE
 if( !$title ) { $title = clean_title(basename(dirname(__FILE__))); }
@@ -244,6 +227,6 @@ build_blocks( $items, false );
 </script>
 <?php } ?>
 </div>
-<div style="padding: 10px 10px 40px 10px;"><a href="https://halgatewood.com/free/file-directory-list/">Free PHP File Directory Script</a> (<a href="https://github.com/halgatewood/file-directory-list/">GitHub</a>)</div>
+<div style="padding: 10px 10px 40px 10px;"><p class="footer">© 2019 - Quentin P - Rayan S - Rodrigue C - Glenn G - Tous droits réservés - Mentions légales</p></div>
 </body>
 </html>
