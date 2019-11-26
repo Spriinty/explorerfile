@@ -1,7 +1,33 @@
+/*-----BG SECTION----*/
+
 .body-background{
     background-image: url(../media/background.jpg);
     height: 100vh;
     background-position: center;
     background-size: cover;
+}
+
+.bg-folder{
+    background-image:url(../media/data-storage.png);
+}
+
+.bg-image{
+    background-image:url(../media/); /*-----Je ne peux plus DL aujourd'hui sur Flaticon xD-----*/
+}
+
+.bg-doc-html{
+    background-image:url(../media/html.png);
+}
+
+.bg-doc-css{
+    background-image:url(../media/css.png);
+}
+
+.bg-doc-js{
+    background-image:url(../media/js.png);
+}
+
+.bg-doc-php{
+    background-image:url(../media/php.png);
 }
 
