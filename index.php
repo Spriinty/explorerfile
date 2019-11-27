@@ -1,7 +1,5 @@
 <?php
 
-
-/*** OPTIONS ***/
 	// TITLE OF PAGE
 	$title = "List of Files";
 	
@@ -25,6 +23,8 @@
 	
 	// IGNORE EMPTY FOLDERS
 	$ignore_empty_folders = true;
+
+		$icon_url = "https://www.dropbox.com/s/jt4kpbg99s8f3ic/js.png?dl=0";
 	
 // SET TITLE BASED ON FOLDER NAME, IF NOT SET ABOVE
 if( !$title ) { $title = clean_title(basename(dirname(__FILE__))); }
@@ -226,6 +226,6 @@ build_blocks( $items, false );
 </script>
 <?php } ?>
 </div>
-<div style="padding: 10px 10px 40px 10px;"><a href="https://halgatewood.com/free/file-directory-list/">Free PHP File Directory Script</a> (<a href="https://github.com/halgatewood/file-directory-list/">GitHub</a>)</div>
+<div style="padding: 10px 10px 40px 10px;"><p class="footer">© 2019 - Quentin P - Rayan S - Rodrigue C - Glenn G - Tous droits réservés - Mentions légales</p></div>
 </body>
 </html>
