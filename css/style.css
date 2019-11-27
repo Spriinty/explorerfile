@@ -37,7 +37,7 @@ a { color: #399ae5; text-decoration: none; } a:hover { color: #206ba4; text-deco
 .note { padding:  0 5px 25px 0; font-size:80%; color: #666; line-height: 18px; }
 .block { clear: both; min-height: 50px; border-top: solid 1px #ECE9E9; }
 .block:first-child { border: none; }
-.block .img { width: 50px; height: 50px; display: block; float: left; margin-right: 10px; background: transparent url(<?php echo $icon_url; ?>) no-repeat 0 0; }
+.block .img { width: 50px; height: 50px; display: block; float: left; margin-right: 10px; background: transparent url(../media/html.png) no-repeat 0 0; }
 .block .file { padding-bottom: 5px; }
 .block .data { line-height: 1.3em; color: #666; }
 .block a { display: block; padding: 20px; transition: all 0.35s; }
