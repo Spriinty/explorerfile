@@ -1,5 +1,4 @@
 <?php
-
 	// TITLE OF PAGE
 	$title = "List of Files";
 	
