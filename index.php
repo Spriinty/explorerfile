@@ -19,62 +19,39 @@
 
 <?php
 
-$d = dir("media");
-echo "Pointeur: ".$d->handle."<br>\n";
-echo "Chemin: ".$d->path."<br>\n";
-while($entry = $d->read()) {
-    echo $entry."<br>\n";
+// La classe dir contient les propriétés et méthodes permettant de parcourir un dossier pour en lister les fichiers.
+
+  function list_dir($name, $level=0) {
+    if ($dir = opendir($name)) {
+      while($file = readdir($dir)) {
+          for($i=1; $i<=(4*$level); $i++) {
+              echo "&nbsp";
+          }
+        echo "$file<br>\n";
+        if(is_dir($file) && !in_array($file, array(".",".."))) {
+          list_dir($file, $level+4);
+        }
+      }
+      closedir($dir);
+    }
+  }
+  list_dir(".");
+
+
+  <table border="1" cellspacing="0" cellpadding="10" bordercolor="gray">
+  <tr valign="top"><td>
+
+?> 
+
+<table border="1" cellspacing="0" cellpadding="10" bordercolor="gray">
+<tr valign="top"><td>
+
+<?php 
+/* lien sur la racine */
+if(!$dir) {
+  echo "/<br />";
+} else {
+  echo "<a href=\"$PHP_SELF\">/</a><br />";
 }
-$d->close();
-
-
-
-$d = dir("vendor");
-echo "Pointeur: ".$d->handle."<br>\n";
-echo "Chemin: ".$d->path."<br>\n";
-while($entry = $d->read()) {
-    echo $entry."<br>\n";
-}
-$d->close();
-
-
-
-
-
-
-// function list_dir($name) {
-// 	if ($dir = opendir($name)) {
-// 	  while($file = readdir($dir)) {
-// 		echo "$file<br>\n";
-// 		if(is_dir($file) && !in_array($file, array(".",".."))) {
-// 		  list_dir($file);
-// 		}
-// 	  }
-// 	  closedir($dir);
-// 	}
-//   }
-//   list_dir("");
-
-//   function list_dir($name, $level=0) {
-// 	if ($dir = opendir($name)) {
-// 	  while($file = readdir($dir)) {
-// 		for($i=1; $i<=(4*$level); $i++) {
-// 			echo "&nbsp;";
-// 		}
-// 		echo "$file<br>\n";
-// 		if(is_dir($file) && !in_array($file, array(".",".."))) {
-// 		  list_dir($file,$level+1);
-// 		}
-// 	  }
-// 	  closedir($dir);
-// 	}
-//   }
-//   list_dir("");
-
-
-
-
-
-
-
+list_dir($BASE, rawurldecode($dir), 1); 
 ?>
