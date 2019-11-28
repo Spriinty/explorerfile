@@ -1,0 +1,12 @@
+{
+    "name": "explorateur/twig",
+    "authors": [
+        {
+            "name": "Spriinty",
+            "email": "quentinpetrequin@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}

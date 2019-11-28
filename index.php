@@ -1,20 +1,49 @@
 <?php
+require 'vendor/autoload.php';
 
-	// TITRE DE LA PAGE
-	$title = "Explorateur de fichiers";
+//routing
+$page = 'home';
+if(isset($_GET['p'])){
+    $page = $_GET['p'];
+}
+
+//Rendu du template
+$loader = new \Twig\Loader\FilesystemLoader(__DIR__ . '/templates');
+$twig = new \Twig\Environment($loader, [
+'cache' => false, //__DIR__ . '/tmp',
+]);
+
+
+
+	// TITLE OF PAGE
+	$title = "List of Files";
+	
+	// STYLING (light or dark)
+	$color	= "dark";
+	
+	// ADD SPECIFIC FILES YOU WANT TO IGNORE HERE
+	$ignore_file_list = array( ".htaccess", "Thumbs.db", ".DS_Store", "index.php" );
+	
+	// ADD SPECIFIC FILE EXTENSIONS YOU WANT TO IGNORE HERE, EXAMPLE: array('psd','jpg','jpeg')
+	$ignore_ext_list = array( );
 	
 	// THEME COULEUR (light or dark)
 	$color	= "dark";
     	
 	// SORT BY
-    $sort_by = "name_asc"; // options: name_asc, name_desc, date_asc, date_desc
-    
+	$sort_by = "name_asc"; // options: name_asc, name_desc, date_asc, date_desc
+	
 	// TOGGLE SUB FOLDERS, SET TO false IF YOU WANT OFF
     $toggle_sub_folders = true;
     
 	// FORCE DOWNLOAD ATTRIBUTE
-	$force_download = false;
-		
+	$force_download = true;
+	
+	// IGNORE EMPTY FOLDERS
+	$ignore_empty_folders = true;
+
+		$icon_url = "https://www.dropbox.com/s/jt4kpbg99s8f3ic/js.png?dl=0";
+	
 // SET TITLE BASED ON FOLDER NAME, IF NOT SET ABOVE
 if( !$title ) { $title = clean_title(basename(dirname(__FILE__))); }
 ?>
@@ -215,5 +244,6 @@ build_blocks( $items, false );
 </script>
 <?php } ?>
 </div>
+<div style="padding: 10px 10px 40px 10px;"><p class="footer">© 2019 - Quentin P - Rayan S - Rodrigue C - Glenn G - Tous droits réservés - Mentions légales</p></div>
 </body>
 </html>
