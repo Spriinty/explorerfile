@@ -1,4 +1,4 @@
-
+<?php $path = getcwd()."/".$_GET["file"]; ?>
 
 
 <!DOCTYPE html>
@@ -11,17 +11,15 @@
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 	<link href="//fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="css/style.css">
-	
-
 </head>
 <body>
 <div class="container-fluid bg-dark mb-3">
 	<div class="container">
-		<div class="row">
-			<div class="col-3">Btn Home</a></div>
+		<div class="row pt-2">
+			<div class="col-3"><a href="index.php">Btn Home</a></div>
 			<div class="col-3"><a href="#">Flèche gauche</a></div>
 			<div class="col-3"><a href="#">Flèche droite</a></div>
-			<div class="col-3 text-white"><p><?php echo getcwd(); ?></p></div>
+			<div class="col-3 text-white"><p><?php echo $path; ?></p></div>
 		</div>
 	</div>
 </div>
@@ -30,52 +28,33 @@
 <div class="container-fluid">
 	<div class="container">
 		<div class="row">
-			<div class="col-12 text-center">
+
 			<?php
 
-				chdir($path);
-				/* getcwd() gives you back "c:\temp\" */
-				// $ressource = opendir($path);
-			?>
-	
-			<?php
-
-			// $iterator = new DirectoryIterator($path);
-
-			// while($iterator->valid()) {
-    		// 	$file = $iterator->current();
-    		// 	echo  $file->getFilename() ."<br>". "\n";
-    		// 	$iterator->next();
-			// }
-
-			/*--------------------------------*/
-
-			 // findfiles.php  -  what is in directory "videoarchive"
-			$path = getcwd()."/".$_GET["file"];
 			$dir = $path; // path from top
 			$files = scandir($dir);
 			$files_n = count($files);
-			var_dump($path);
+			// var_dump($path);
 
-			$i=1;
+			$i=0;
 
-			while($i<=$files_n){
+			// while($i<=$files_n)
+			
+			for($i=0; $i<=$files_n-1; $i++){
 				// "is_dir" only works from top directory, so append the $dir before the file
 				if (is_dir($dir.'/'.$files[$i])){
 
 					$MyFileType[$i] = "D" ; // D for Directory
-					echo '<br>'.$i.'. '. $MyFileType[$i].' . '.'<a href="index.php?file='.$files[$i].'">'.$files[$i].'</a>' ;
+					echo '<div class="col-3 text-center">'.$i.'. '. $MyFileType[$i].' . '.'<a href="index.php?file='.$files[$i].'">'.$files[$i].'</a>'.'</div>' ;
 				} else{
 					$MyFileType[$i] = "F" ; // F for File
-					echo '<br>'.$i.'. '. $MyFileType[$i].' . '.$files[$i] ;
+					echo '<div class="col-3 text-center">'.$i.'. '. $MyFileType[$i].' . '.$files[$i].'</div>';
 				}
 				// print itemNo, itemType(D/F) and itemname
-				
-				$i++;
+				// $i++;
 			}
 			?>
 
-			</div>
 		</div>
 	</div>
 </div>
