@@ -4,10 +4,6 @@
     min-height: 100vh;
 }
 
-.h-70-px{
-    min-height: 70px;
-}
-
 .h-100pc{
     height: 100%;
 }
@@ -18,3 +14,28 @@
     background-color: #00000093;
 }
 
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet');
+
+img{
+  width: 70px;
+  height: 70px;
+}
+
+p{
+    font-family: 'Advent Pro', sans-serif !important;
+    font-size: 18px;
+    color: white;
+}
+
+.a-link{
+    font-size: 20px;
+    color: white
+}
+
+.h-70-px{
+    min-height: 70px;
+}
+
+.font-advent{
+    font-family: 'Advent Pro', sans-serif !important;
+}

@@ -9,7 +9,7 @@
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
 	 <!-- Bootstrap CSS -->
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-	<link href="//fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,10 +18,10 @@
 <div class="container-fluid d-flex mt-5">
 	<div class="container border border-secondary bg-mid-black">
 		<div class="row pt-2 bg-dark">
-			<div class="col-3"><a href="index.php">Btn Home</a></div>
-			<div class="col-3"><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?>Précédent</a><? endif ?></div>
-			<div class="col-3"><? if ($page ><a href="index.php?page=<?= $page + 1 ?>"?>Suivant</a><? endif ?></div>
-			<div class="col-3 text-white"><p><?php echo $path; ?></p></div>
+			<div class="col-3 text-center"><a href="index.php">Btn Home</a></div>
+			<div class="col-3 text-center"><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?>Précédent</a><? endif ?></div>
+			<div class="col-3 text-center"><? if ($page ><a href="index.php?page=<?= $page + 1 ?>"?>Suivant</a><? endif ?></div>
+			<div class="col-3 text-center a-link"><p><?php echo $path; ?></p></div>
 		</div>
 		<div class="row">
 			<?php
