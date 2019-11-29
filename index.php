@@ -19,14 +19,14 @@
 <body>
 
 
-<div class="min-h-100vh mt-5">
-<div class="container-fluid d-flex mt-5">
+<div class="min-h-100vh pt-5">
+<div class="container-fluid d-flex pt-5">
 	<div class="container shadow bg-mid-black">
-	<div class="row pt-2 bg-dark">
-			<div class="col-3 text-center "><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
-			<div class="col-3 text-center "><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
-			<div class="col-3 text-center "><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
-			<div class="col-3 text-center a-link"><p><?php echo $path; ?></p></div>
+	<div class="row pt-2 bg-dark align-items-center border-purple">
+			<div class="col-3 text-center"><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
+			<div class="col-3 text-center"><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
+			<div class="col-3 text-center"><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
+			<div class="col-3 text-center a-link"><p class="mb-2"><?php echo $path; ?></p></div>
 		</div>
 		<div class="row pt-3">
 			<?php
