@@ -17,15 +17,11 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<div class="container-fluid bg-dark mb-3">
-	<div class="container">
-		
-	</div>
-</div>
+
 
 <div class="min-h-100vh mt-5">
 <div class="container-fluid d-flex mt-5">
-	<div class="container border border-secondary bg-mid-black">
+	<div class="container shadow bg-mid-black">
 	<div class="row pt-2">
 			<div class="col-3 text-center "><a href="index.php"><i class="fas fa-home text-light"></i></a></div>
 			<div class="col-3 text-center "><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
