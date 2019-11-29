@@ -14,22 +14,16 @@
 </head>
 <body>
 
-<div class="container-fluid bg-dark mb-3">
-	<div class="container">
-		<div class="row pt-2">
+<div class="min-h-100vh mt-5">
+<div class="container-fluid d-flex mt-5">
+	<div class="container border border-secondary bg-mid-black">
+		<div class="row pt-2 bg-dark">
 			<div class="col-3"><a href="index.php">Btn Home</a></div>
 			<div class="col-3"><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?>Précédent</a><? endif ?></div>
 			<div class="col-3"><? if ($page ><a href="index.php?page=<?= $page + 1 ?>"?>Suivant</a><? endif ?></div>
 			<div class="col-3 text-white"><p><?php echo $path; ?></p></div>
 		</div>
-	</div>
-</div>
-
-<!-- <div class="wrap"> -->
-<div class="container-fluid">
-	<div class="container">
 		<div class="row">
-
 			<?php
 
 			$dir = $path; // path from top
@@ -55,8 +49,6 @@
 
 					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'-icon.png" alt="Fichier" width="70px" height="70px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
 				}
-				// print itemNo, itemType(D/F) and itemname
-				// $i++;
 			}
 
 			?>
@@ -64,6 +56,8 @@
 		</div>
 	</div>
 </div>
+</div>
+
 
  <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
