@@ -28,7 +28,7 @@
 			<div class="col-3 text-center "><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
 			<div class="col-3 text-center a-link"><p><?php echo $path; ?></p></div>
 		</div>
-		<div class="row">
+		<div class="row pt-3">
 			<?php
 
 			$dir = $path; // path from top
