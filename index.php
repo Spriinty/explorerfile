@@ -9,17 +9,17 @@
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
 	 <!-- Bootstrap CSS -->
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
-	<link href="//fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="font-advent">
 <div class="container-fluid bg-dark mb-3">
 	<div class="container">
 		<div class="row pt-2">
-			<div class="col-3"><a href="index.php">Btn Home</a></div>
-			<div class="col-3"><a href="#">Flèche gauche</a></div>
-			<div class="col-3"><a href="#">Flèche droite</a></div>
-			<div class="col-3 text-white"><p><?php echo $path; ?></p></div>
+			<div class="col-3 text-center"><a href="index.php">Btn Home</a></div>
+			<div class="col-3 text-center"><a href="#">Flèche gauche</a></div>
+			<div class="col-3 text-center"><a href="#">Flèche droite</a></div>
+			<div class="col-3 a-link text-center"><p><?php echo $path; ?></p></div>
 		</div>
 	</div>
 </div>
