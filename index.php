@@ -39,7 +39,7 @@
 			$i=0;
 
 			// while($i<=$files_n)
-			
+
 			for($i=0; $i<=$files_n-1; $i++){
 
 				// "is_dir" only works from top directory, so append the $dir before the file
