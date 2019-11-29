@@ -6,6 +6,8 @@
 /*-----BG SECTION----*/
 body{
     background-image: url(../media/mont-luna.jpg);
+    background-position: center;
+    background-size: cover;
 }
 .bg-folder{
     background-image:url(../media/data-storage.png);
