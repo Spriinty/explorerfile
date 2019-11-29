@@ -22,10 +22,10 @@
 <div class="min-h-100vh mt-5">
 <div class="container-fluid d-flex mt-5">
 	<div class="container shadow bg-mid-black">
-	<div class="row pt-2">
-			<div class="col-3 text-center "><a href="index.php"><i class="fas fa-home text-light"></i></a></div>
-			<div class="col-3 text-center "><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
-			<div class="col-3 text-center "><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
+	<div class="row pt-2 bg-dark">
+			<div class="col-3 text-center "><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
+			<div class="col-3 text-center "><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
+			<div class="col-3 text-center "><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
 			<div class="col-3 text-center a-link"><p><?php echo $path; ?></p></div>
 		</div>
 		<div class="row">
@@ -46,13 +46,13 @@
 				if (is_dir($dir.'/'.$files[$i])){
 
 					// $MyFileType[$i] = "D" ; // D for Directory
-					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="70px" height="70px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
+					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
 				} else{
 					// $MyFileType[$i] = "F" ; // F for File
 					
 					$extendFile = pathinfo($files[$i], PATHINFO_EXTENSION);
 
-					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'-icon.png" alt="Fichier" width="70px" height="70px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
+					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'-icon.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
 				}
 			}
 
