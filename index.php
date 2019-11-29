@@ -1,57 +1,73 @@
+<?php $path = getcwd()."/".$_GET["file"]; ?>
+
 
 <!DOCTYPE html>
 <html>
 <head>
-<title><?php echo $title; ?></title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
-<link href="//fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css" />
-<link rel="stylesheet" href="css/style.css">
+	<title><?php echo $title; ?></title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
+	 <!-- Bootstrap CSS -->
+	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
+	<link href="//fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="<?php echo $color; ?>">
-<h1><?php echo $title ?></h1>
-<div class="wrap">
+<body>
+<div class="container-fluid bg-dark mb-3">
+	<div class="container">
+		<div class="row pt-2">
+			<div class="col-3"><a href="index.php">Btn Home</a></div>
+			<div class="col-3"><a href="#">Flèche gauche</a></div>
+			<div class="col-3"><a href="#">Flèche droite</a></div>
+			<div class="col-3 text-white"><p><?php echo $path; ?></p></div>
+		</div>
+	</div>
 </div>
-<div style="padding: 10px 10px 40px 10px;"><p class="footer">© 2019 - Quentin P - Rayan S - Rodrigue C - Glenn G - Tous droits réservés - Mentions légales</p></div>
-</body>
+
+<!-- <div class="wrap"> -->
+<div class="container-fluid">
+	<div class="container">
+		<div class="row">
+
+			<?php
+
+			$dir = $path; // path from top
+			$files = scandir($dir);
+			$files_n = count($files);
+			// var_dump($path);
+			
+			$i=0;
+
+			// while($i<=$files_n)
+			
+			for($i=0; $i<=$files_n-1; $i++){
+
+				// "is_dir" only works from top directory, so append the $dir before the file
+				if (is_dir($dir.'/'.$files[$i])){
+
+					// $MyFileType[$i] = "D" ; // D for Directory
+					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="50px" height="50px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
+				} else{
+					// $MyFileType[$i] = "F" ; // F for File
+					
+					$extendFile = pathinfo($files[$i], PATHINFO_EXTENSION);
+
+					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'.png" alt="Fichier" width="50px" height="50px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
+				}
+				// print itemNo, itemType(D/F) and itemname
+				// $i++;
+			}
+
+			?>
+
+		</div>
+	</div>
+</div>
+
+ <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+  </body>
 </html>
-
-<?php
-
-// La classe dir contient les propriétés et méthodes permettant de parcourir un dossier pour en lister les fichiers.
-
-  function list_dir($name, $level=0) {
-    if ($dir = opendir($name)) {
-      while($file = readdir($dir)) {
-          for($i=1; $i<=(4*$level); $i++) {
-              echo "&nbsp";
-          }
-        echo "$file<br>\n";
-        if(is_dir($file) && !in_array($file, array(".",".."))) {
-          list_dir($file, $level+4);
-        }
-      }
-      closedir($dir);
-    }
-  }
-  list_dir(".");
-
-
-  <table border="1" cellspacing="0" cellpadding="10" bordercolor="gray">
-  <tr valign="top"><td>
-
-?> 
-
-<table border="1" cellspacing="0" cellpadding="10" bordercolor="gray">
-<tr valign="top"><td>
-
-<?php 
-/* lien sur la racine */
-if(!$dir) {
-  echo "/<br />";
-} else {
-  echo "<a href=\"$PHP_SELF\">/</a><br />";
-}
-list_dir($BASE, rawurldecode($dir), 1); 
-?>
