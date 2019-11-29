@@ -3,6 +3,13 @@
 .min-h-100vh{
     min-height: 100vh;
 }
+/*-----BG SECTION----*/
+body{
+    background-image: url(../media/mont-luna.jpg);
+}
+.bg-folder{
+    background-image:url(../media/data-storage.png);
+}
 
 .h-100pc{
     height: 100%;
@@ -29,7 +36,13 @@ p{
 
 .a-link{
     font-size: 20px;
-    color: white
+    color: white;
+}
+.footer{
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #666;
 }
 
 .h-70-px{
