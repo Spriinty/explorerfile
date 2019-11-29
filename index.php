@@ -23,8 +23,8 @@
 <div class="container-fluid d-flex mt-5">
 	<div class="container shadow bg-mid-black">
 	<div class="row pt-2 bg-dark">
-			<div class="col-3 text-center "><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
-			<div class="col-3 text-center "><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
+			<div class="col-3 text-center"><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
+			<div class="col-3 text-center"><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
 			<div class="col-3 text-center "><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
 			<div class="col-3 text-center a-link"><p><?php echo $path; ?></p></div>
 		</div>
@@ -44,9 +44,9 @@
 
 				// "is_dir" only works from top directory, so append the $dir before the file
 				if (is_dir($dir.'/'.$files[$i])){
-
+					if ($files[$i] == '.' or $files[$i] == '..'){continue;}
 					// $MyFileType[$i] = "D" ; // D for Directory
-					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
+					echo '<div class="col-3 col-bg text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
 				} else{
 					// $MyFileType[$i] = "F" ; // F for File
 					

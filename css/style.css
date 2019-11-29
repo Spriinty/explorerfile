@@ -10,6 +10,14 @@ body{
 .bg-folder{
     background-image:url(../media/data-storage.png);
 }
+.col-bg{
+    transition: 0.3s;
+}
+
+.col-bg:hover{
+    background-color: rgba(0, 0, 0, 0.746);
+transition: 0.3s;
+}
 
 .h-100pc{
     height: 100%;
