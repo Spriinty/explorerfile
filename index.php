@@ -11,24 +11,28 @@
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
+
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link href="//fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="css/style.css">
 </head>
-<body class="font-advent">
+<body>
 <div class="container-fluid bg-dark mb-3">
 	<div class="container">
-		<div class="row pt-2">
-			<div class="col-3 text-center"><a href="index.php">Btn Home</a></div>
-			<div class="col-3 text-center"><a href="#">Flèche gauche</a></div>
-			<div class="col-3 text-center"><a href="#">Flèche droite</a></div>
-			<div class="col-3 a-link text-center"><p><?php echo $path; ?></p></div>
-		</div>
+		
 	</div>
 </div>
 
-<!-- <div class="wrap"> -->
-<div class="container-fluid">
-	<div class="container">
+<div class="min-h-100vh mt-5">
+<div class="container-fluid d-flex mt-5">
+	<div class="container border border-secondary bg-mid-black">
+	<div class="row pt-2">
+			<div class="col-3 text-center "><a href="index.php"><i class="fas fa-home text-light"></i></a></div>
+			<div class="col-3 text-center "><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
+			<div class="col-3 text-center "><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
+			<div class="col-3 text-center a-link"><p><?php echo $path; ?></p></div>
+		</div>
 		<div class="row">
-
 			<?php
 
 			$dir = $path; // path from top
@@ -39,23 +43,21 @@
 			$i=0;
 
 			// while($i<=$files_n)
-			
+
 			for($i=0; $i<=$files_n-1; $i++){
 
 				// "is_dir" only works from top directory, so append the $dir before the file
 				if (is_dir($dir.'/'.$files[$i])){
 
 					// $MyFileType[$i] = "D" ; // D for Directory
-					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="50px" height="50px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
+					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="70px" height="70px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
 				} else{
 					// $MyFileType[$i] = "F" ; // F for File
 					
 					$extendFile = pathinfo($files[$i], PATHINFO_EXTENSION);
 
-					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'.png" alt="Fichier" width="50px" height="50px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
+					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'-icon.png" alt="Fichier" width="70px" height="70px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
 				}
-				// print itemNo, itemType(D/F) and itemname
-				// $i++;
 			}
 
 			?>
@@ -63,6 +65,8 @@
 		</div>
 	</div>
 </div>
+</div>
+
 
  <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

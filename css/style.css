@@ -1,3 +1,19 @@
+/*-----HEIGHT AND WIDTH SECTION-----*/
+
+.min-h-100vh{
+    min-height: 100vh;
+}
+
+.h-100pc{
+    height: 100%;
+}
+
+/*-----BG SECTION----*/
+
+.bg-mid-black{
+    background-color: #00000093;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet');
 
 body{
