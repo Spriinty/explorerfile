@@ -46,13 +46,13 @@
 				if (is_dir($dir.'/'.$files[$i])){
 
 					// $MyFileType[$i] = "D" ; // D for Directory
-					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="50px" height="50px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
+					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="70px" height="70px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
 				} else{
 					// $MyFileType[$i] = "F" ; // F for File
 					
 					$extendFile = pathinfo($files[$i], PATHINFO_EXTENSION);
 
-					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'.png" alt="Fichier" width="50px" height="50px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
+					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'-icon.png" alt="Fichier" width="70px" height="70px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
 				}
 				// print itemNo, itemType(D/F) and itemname
 				// $i++;
