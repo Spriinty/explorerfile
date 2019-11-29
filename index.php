@@ -35,24 +35,29 @@
 			$files = scandir($dir);
 			$files_n = count($files);
 			// var_dump($path);
-
+			
 			$i=0;
 
 			// while($i<=$files_n)
 			
 			for($i=0; $i<=$files_n-1; $i++){
+
 				// "is_dir" only works from top directory, so append the $dir before the file
 				if (is_dir($dir.'/'.$files[$i])){
 
-					$MyFileType[$i] = "D" ; // D for Directory
-					echo '<div class="col-3 text-center">'.$i.'. '. $MyFileType[$i].' . '.'<a href="index.php?file='.$files[$i].'">'.$files[$i].'</a>'.'</div>' ;
+					// $MyFileType[$i] = "D" ; // D for Directory
+					echo '<div class="col-3 text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="50px" height="50px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
 				} else{
-					$MyFileType[$i] = "F" ; // F for File
-					echo '<div class="col-3 text-center">'.$i.'. '. $MyFileType[$i].' . '.$files[$i].'</div>';
+					// $MyFileType[$i] = "F" ; // F for File
+					
+					$extendFile = pathinfo($files[$i], PATHINFO_EXTENSION);
+
+					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'.png" alt="Fichier" width="50px" height="50px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
 				}
 				// print itemNo, itemType(D/F) and itemname
 				// $i++;
 			}
+
 			?>
 
 		</div>
