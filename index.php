@@ -19,7 +19,7 @@
 			<div class="col-3"><a href="index.php">Btn Home</a></div>
 			<div class="col-3"><a href="#">Flèche gauche</a></div>
 			<div class="col-3"><a href="#">Flèche droite</a></div>
-			<div class="col-3 text-white"><p><?php echo $path; ?></p></div>
+			<div class="col-3 text-white"><p><?php echo $path;  ?></p></div>
 		</div>
 	</div>
 </div>
