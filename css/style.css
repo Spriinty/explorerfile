@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet');
 
+body{
+    cursor: url('votre_curseur_perso.cur'), pointer;
+}
+
 img{
   width: 70px;
   height: 70px;
