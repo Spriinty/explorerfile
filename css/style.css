@@ -27,6 +27,9 @@ body{
     cursor: url('votre_curseur_perso.cur'), pointer;
 }
 
+a{
+    text-decoration: none !important;
+}
 img{
   width: 70px;
   height: 70px;
@@ -42,12 +45,6 @@ p{
     font-size: 20px;
     color: white;
 }
-.footer{
-    text-align: center;
-    font-size: 15px;
-    font-weight: bold;
-    color: #666;
-}
 
 .h-70-px{
     min-height: 70px;
@@ -55,4 +52,9 @@ p{
 
 .font-advent{
     font-family: 'Advent Pro', sans-serif !important;
+}
+
+.bg-gradient{
+    background: rgb(46,50,54);
+    background: linear-gradient(90deg, rgba(46,50,54,1) 0%, rgba(52,58,64,1) 50%, rgba(74,82,91,1) 100%);
 }
