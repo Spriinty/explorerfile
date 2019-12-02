@@ -1,10 +1,12 @@
-<?php $path = getcwd()."/".$_GET["file"]; ?>
+<?php 
+$path = getcwd() . "\n";
+?>
 
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Explorateur de fichier</title>
+	<title>Explorateur de Fichier</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
 	 <!-- Bootstrap CSS -->
@@ -22,10 +24,10 @@
 <div class="min-h-100vh pt-5">
 <div class="container-fluid d-flex pt-5">
 	<div class="container shadow bg-mid-black border-purple">
-	<div class="row pt-2 bg-dark align-items-center mb-2">
+		<div class="row pt-2 bg-dark align-items-center mb-2">
 			<div class="col-lg-3 col-md-3 col-sm-2 col-2 text-center"><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
-			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center"><a href=""><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a></div>
-			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center "><a href=""><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a></div>
+			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center"><a href="javascript:history.go(-1)"><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a></div>
+			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center "><a href="javascript:history.go(+1)"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a></div>
 			<div class="col-lg-5 col-md-3 col-sm-6 col-6 text-center a-link"><p class='m-0'><?php echo $path; ?></p></div>
 		</div>
 		<div class="row pt-3">
@@ -46,7 +48,7 @@
 				if (is_dir($dir.'/'.$files[$i])){
 					if ($files[$i] == '.' or $files[$i] == '..'){continue;}
 					// $MyFileType[$i] = "D" ; // D for Directory
-					echo '<div class="col-lg-3 col-md-3 col-sm-6 col-6 col-bg text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;				} else{
+					echo '<div class="col-lg-3 col-md-3 col-sm-6 col-6 col-bg text-center h-70-px">'.'<a class="text-decoration-none" href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;				} else{
 					// $MyFileType[$i] = "F" ; // F for File
 					
 					$extendFile = pathinfo($files[$i], PATHINFO_EXTENSION);
