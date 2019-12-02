@@ -21,12 +21,12 @@
 
 <div class="min-h-100vh pt-5">
 <div class="container-fluid d-flex pt-5">
-	<div class="container shadow bg-mid-black">
-	<div class="row pt-2 bg-dark align-items-center border-purple">
-			<div class="col-3 text-center"><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
-			<div class="col-3 text-center"><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
-			<div class="col-3 text-center"><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
-			<div class="col-3 text-center a-link"><p class="mb-2"><?php echo $path; ?></p></div>
+	<div class="container shadow bg-mid-black border-purple">
+	<div class="row pt-2 bg-dark align-items-center mb-2">
+			<div class="col-lg-3 col-md-3 col-sm-2 col-2 text-center"><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
+			<div class="col-lg-3 col-md-3 col-sm-2 col-2 text-center"><? if ($page ><a href="index.php?page=<?= $page - 1 ?>"?><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
+			<div class="col-lg-3 col-md-3 col-sm-2 col-2 text-center "><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
+			<div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center a-link"><p class='m-0'><?php echo $path; ?></p></div>
 		</div>
 		<div class="row pt-3">
 			<?php
@@ -46,13 +46,12 @@
 				if (is_dir($dir.'/'.$files[$i])){
 					if ($files[$i] == '.' or $files[$i] == '..'){continue;}
 					// $MyFileType[$i] = "D" ; // D for Directory
-					echo '<div class="col-3 col-bg text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;
-				} else{
+					echo '<div class="col-lg-3 col-md-3 col-sm-6 col-6 col-bg text-center h-70-px">'.'<a href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;				} else{
 					// $MyFileType[$i] = "F" ; // F for File
 					
 					$extendFile = pathinfo($files[$i], PATHINFO_EXTENSION);
 
-					echo '<div class="col-3 text-center h-70-px">'.'<img src="media/'."$extendFile".'-icon.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
+					echo '<div class="col-lg-3 col-md-3 col-sm-6 col-6 text-center h-70-px">'.'<img src="media/'."$extendFile".'-icon.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</div>';
 				}
 			}
 
@@ -63,11 +62,11 @@
 </div>
 </div>
 
-
- <!-- Optional JavaScript -->
+ 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/js/bootstrap.min.js" integrity="sha384-3qaqj0lc6sV/qpzrc1N5DC6i1VRn/HyX4qdPaiEFbn54VjQBEU341pvjz7Dv3n6P" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
   </body>
 </html>

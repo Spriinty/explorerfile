@@ -18,7 +18,7 @@ body{
 
 .col-bg:hover{
     background-color: rgba(0, 0, 0, 0.746);
-transition: 0.3s;
+    transition: 0.3s;
 }
 
 .h-100pc{
@@ -32,7 +32,7 @@ transition: 0.3s;
 }
 
 .border-purple{
-    border-top: 2px solid #904fb3;
+    border-top: 5px solid #904fb3;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet');
