@@ -1,7 +1,4 @@
 <?php 
-
-
-
 if(!isset($_GET['file'])){
 	$_GET['file']= '.';
 	}
