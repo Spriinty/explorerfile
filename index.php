@@ -1,6 +1,14 @@
 <?php 
+
+
+
+if(!isset($_GET['file'])){
+	$_GET['file']= '.';
+	}
+
 $path = getcwd()."/".$_GET["file"];
- ?>
+
+?>
 
 <!DOCTYPE html>
 <html>
