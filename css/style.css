@@ -31,6 +31,10 @@ transition: 0.3s;
     background-color: #00000093;
 }
 
+.border-purple{
+    border-top: 2px solid #904fb3;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet');
 
 img{
