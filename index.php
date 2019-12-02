@@ -1,6 +1,4 @@
 <?php 
-
-
 if(!isset($_GET['file'])){
 	$_GET['file']= '.';
 	}
@@ -15,13 +13,37 @@ $path = getcwd()."/".$_GET["file"];
 	<title>Explorateur de fichiers</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
+	<!-- DEBUT META TAGS -->
+	<meta name="description" content="Découvrez notre projet d'explorateur de fichiers réalisé lors de notre formation Access Code School en développement web.">
+	<meta name="robots" content="all">
+	<meta name="keywords" content="design, home page, welcome">
+	<!--meta property-->
+	<meta property="og:locale" content="fr_FR">
+	<meta property="og:url" content="http://quentinp364.promo-vesoul33.codeur.online/explorateur/index.php">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="Explorateur de fichiers">
+	<meta property="og:description" content="Découvrez notre projet d'explorateur de fichiers réalisé lors de notre formation Access Code School en développement web.">
+	<meta property="og:site_name" content="Explorateur de fichiers">
+	<meta property="og:image" content="http://quentinp364.promo-vesoul33.codeur.online/explorateur/media/miniature-meta.png">
+	<meta property="og:image:width" content="1903">
+	<meta property="og:image:height" content="897">
+	<meta property="og:image:alt" content="facebook_partage">
+	<!-- Twitter -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:title" content="Explorateur de fichiers">
+	<meta name="twitter:description"
+		content="Découvrez notre projet d'explorateur de fichiers réalisé lors de notre formation Access Code School en développement web.">
+	<meta name="twitter:site" content="https://twitter.com/explorateur">
+	<meta name="twitter:image" content="http://quentinp364.promo-vesoul33.codeur.online/explorateur/media/miniature-meta.png">
+	<meta name="twitter:creator" content="Rodrigue, Rayan, Glenn, Quentin">
+
+	<!-- FIN META TAGS -->
 	 <!-- Bootstrap CSS -->
 	 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.0/css/bootstrap.min.css" integrity="sha384-SI27wrMjH3ZZ89r4o+fGIJtnzkAnFs3E4qz9DIYioCQ5l9Rd/7UAa8DHcaL8jkWt" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="css/style.css">
-
 	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link href="//fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" type="image/x-icon" href="media/favicon.ico">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
