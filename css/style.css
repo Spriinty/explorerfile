@@ -6,9 +6,19 @@
 /*-----BG SECTION----*/
 body{
     background-image: url(../media/mont-luna.jpg);
+    background-position: center;
+    background-size: cover;
 }
 .bg-folder{
     background-image:url(../media/data-storage.png);
+}
+.col-bg{
+    transition: 0.3s;
+}
+
+.col-bg:hover{
+    background-color: rgba(0, 0, 0, 0.746);
+    transition: 0.3s;
 }
 
 .h-100pc{
@@ -22,7 +32,7 @@ body{
 }
 
 .border-purple{
-    border-top: 2px solid #904fb3;
+    border-top: 5px solid #904fb3;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap" rel="stylesheet');
