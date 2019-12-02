@@ -1,12 +1,18 @@
 <?php 
-$path = getcwd() . "\n";
-?>
 
+
+if(!isset($_GET['file'])){
+	$_GET['file']= '.';
+	}
+
+$path = getcwd()."/".$_GET["file"];
+
+?>
 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Explorateur de Fichier</title>
+	<title>Explorateur de fichiers</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
 	 <!-- Bootstrap CSS -->
