@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $title; ?></title>
+	<title>Explorateur de fichier</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,height=device-height,initial-scale=1.0,maximum-scale=1.0, viewport-fit=cover">
 	 <!-- Bootstrap CSS -->
@@ -24,8 +24,8 @@
 	<div class="container shadow bg-mid-black border-purple">
 	<div class="row pt-2 bg-dark align-items-center mb-2">
 			<div class="col-lg-3 col-md-3 col-sm-2 col-2 text-center"><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
-			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center"><? if ($page >"<a href='index.php?page=<?= $page - 1 ?>'"?><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a><? endif ?></div>
-			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center "><? if ($page != $maxPages) : ?><a href="index.php?page=<?= $page + 1 ?>"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a><? endif ?></div>
+			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center"><a href=""><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a></div>
+			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center "><a href=""><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a></div>
 			<div class="col-lg-5 col-md-3 col-sm-6 col-6 text-center a-link"><p class='m-0'><?php echo $path; ?></p></div>
 		</div>
 		<div class="row pt-3">
