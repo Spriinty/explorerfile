@@ -55,7 +55,7 @@ $path = getcwd()."/".$_GET["file"];
 		<div class="row pt-2 bg-dark align-items-center mb-2">
 			<div class="col-lg-3 col-md-3 col-sm-2 col-2 text-center"><a href="index.php"><i class="h5 fas fa-home text-light"></i></a></div>
 			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center"><a href="javascript:history.go(-1)"><i class="h5 fas fa-arrow-alt-circle-left text-light"></i></a></div>
-			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center "><a href="javascript:history.go(+1)"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a></div>
+			<div class="col-lg-2 col-md-3 col-sm-2 col-2 text-center"><a href="javascript:history.go(+1)"><i class="h5 fas fa-arrow-alt-circle-right text-light"></i></a></div>
 			<div class="col-lg-5 col-md-3 col-sm-6 col-6 text-center a-link"><p class='m-0'><?php echo $path; ?></p></div>
 		</div>
 		<div class="row pt-3">
@@ -76,7 +76,8 @@ $path = getcwd()."/".$_GET["file"];
 				if (is_dir($dir.'/'.$files[$i])){
 					if ($files[$i] == '.' or $files[$i] == '..'){continue;}
 					// $MyFileType[$i] = "D" ; // D for Directory
-					echo '<div class="col-lg-3 col-md-3 col-sm-6 col-6 col-bg text-center h-70-px">'.'<a class="text-decoration-none" href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;				} else{
+					echo '<div class="col-lg-3 col-md-3 col-sm-6 col-6 col-bg text-center h-70-px">'.'<a class="text-decoration-none" href="index.php?file='.$files[$i].'">'.'<img src="media/data-storage.png" alt="Fichier" width="512px" height="512px"/>'.'<p>'.$files[$i].'</p>'.'</a>'.'</div>' ;				
+				} else{
 					// $MyFileType[$i] = "F" ; // F for File
 					
 					$extendFile = pathinfo($files[$i], PATHINFO_EXTENSION);
